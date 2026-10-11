@@ -2,6 +2,21 @@
 
 <form [formGroup]="progressNotesForm">
   <p>
+    <label for="project-code">Project Code:</label><br>
+    <input
+      id="project-code"
+      type="text"
+      formControlName="projectCode"
+      (blur)="onProjectCodeBlur()">
+  </p>
+
+  <p
+    [hidden]="projectCodeMessage === ''"
+    role="alert">
+    {{ projectCodeMessage }}
+  </p>
+
+  <p>
     <label for="project-name">Project Name:</label><br>
     <input
       id="project-name"
@@ -45,3 +60,14 @@
       formControlName="progressNote"></textarea>
   </p>
 </form>
+
+<h3>Two-Way Binding Practice</h3>
+
+<label for="practice-note">Practice Note:</label>
+
+<input
+  id="practice-note"
+  type="text"
+  [(ngModel)]="practiceNote">
+
+<p>Current Note: {{ practiceNote }}</p>

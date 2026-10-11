@@ -1,9 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { MilestoneTracker } from './milestone-tracker/milestone-tracker';
 import { ProgressNotes } from './progress-notes/progress-notes';
+import { ProjectOverview } from './project-overview/project-overview';
+import { TechnologyChecklist } from './technology-checklist/technology-checklist';
 
 @Component({
-  imports: [MilestoneTracker, ProgressNotes],
+  imports: [
+    MilestoneTracker,
+    ProgressNotes,
+    ProjectOverview,
+    TechnologyChecklist
+  ],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
